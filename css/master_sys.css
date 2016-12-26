@@ -288,3 +288,37 @@ h3 {
   width: 215px;
   cursor: pointer;
 }
+
+.addTest {
+  width: 100%;
+  background: #428bca;
+  height: 100px;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addTest .nameTest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.addTest input {
+  width: 50%;
+  height: 30px;
+  color: black;
+  padding-left: 20px;
+}
+
+.addTest button {
+  background: white;
+  color: black;
+  border: none;
+  margin-left: 20px;
+  width: 90px;
+  height: 30px;
+}
