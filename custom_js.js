@@ -14,6 +14,8 @@ $(window).resize(function(event) {
 
 $(document).ready(function() {
 
+  //readr
+
     var value1 = 0;
     $('.suites h1:first-child').html(0);
     setInterval(function() {
