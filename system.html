@@ -8,8 +8,8 @@
     <title></title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="bootstrap.min.css" media="screen" title="no title">
-    <link rel="stylesheet" href="master_sys.css" media="screen" title="no title">
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="css/master_sys.css" media="screen" title="no title">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +41,7 @@
                             <a href="#"><img src="img/home.png" alt="" />HOME</a>
                         </li>
                         <li class="li-drop">
-                            <a href="#"><img src="img/project.png" alt="" />PROJEKTY</a>
+                            <a href="#" id="listProject"><img src="img/project.png"  alt="" />PROJEKTY</a>
                             <ul class="menu_drop">
                                 <li>
                                     <a href="#"><img src="img/pencil.png" alt="" />PROJEKT 1</a>
@@ -79,7 +79,7 @@
     </section>
 
     <section>
-        <div class="wrapper-content">
+        <div class="wrapper-content" id="home">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
@@ -272,18 +272,269 @@
             </div>
 
         </div>
+
+        <div class="wrapper-content" id="projekt_menu_1">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="suites">
+                        <div class="box_header_text">
+                            <h1 id="projekt1_suites">360</h1>
+                            <h1>TOTAL SUITES</h1>
+                        </div>
+                        <div class="box_header_img">
+                            <img src="img/suites.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="failed">
+                        <div class="box_header_text">
+                            <h1>3</h1>
+                            <h1>FAILED</h1>
+                        </div>
+                        <div class="box_header_img">
+                            <img src="img/failed.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="success">
+                        <div class="box_header_text">
+                            <h1>673</h1>
+                            <h1>SUCCESSS</h1>
+                        </div>
+                        <div class="box_header_img">
+                            <img src="img/success.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="text">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr >
+                                    <th>#</th>
+                                    <th>SUITES</th>
+                                    <th>WYNIK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-success">
+                                    <th scope="row">1</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>SUCCESS</td>
+                                </tr>
+                                <tr class="bg-success">
+                                    <th scope="row">2</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>SUCCESS</td>
+                                </tr>
+                                <tr class="bg-success">
+                                    <th scope="row">3</th>
+                                    <td>Suites pewnie jakiś wynik lub inny wynik</td>
+                                    <td>SUCCESS</td>
+                                </tr>
+                                <tr class="bg-danger" >
+                                    <th scope="row">4</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>FAILED</td>
+                                </tr>
+                                <tr class="bg-danger" >
+                                    <th scope="row">5</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>FAILED</td>
+                                </tr>
+                                <tr class="bg-success" >
+                                    <th scope="row">6</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>SUCCESS</td>
+                                </tr>
+                                <tr class="bg-warning">
+                                    <th scope="row">7</th>
+                                    <td>Suites coś poszło nie tak</td>
+                                    <td>WARNING</td>
+                                </tr>
+                                <tr class="bg-warning">
+                                    <th scope="row">8</th>
+                                    <td>Suites coś poszło nie tak</td>
+                                    <td>WARNING</td>
+                                </tr>
+                                <tr class="bg-danger" >
+                                    <th scope="row">9</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>FAILED</td>
+                                </tr>
+                                <tr class="bg-danger" >
+                                    <th scope="row">10</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>FAILED</td>
+                                </tr>
+                                <tr class="bg-success" >
+                                    <th scope="row">11</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>SUCCESS</td>
+                                </tr>
+                                <tr class="bg-success" >
+                                    <th scope="row">12</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>SUCCESS</td>
+                                </tr>
+                                <tr class="bg-success" >
+                                    <th scope="row">13</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>SUCCESS</td>
+                                </tr>
+                                <tr class="bg-success" >
+                                    <th scope="row">14</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>SUCCESS</td>
+                                </tr>
+                                <tr class="bg-success" >
+                                    <th scope="row">15</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>SUCCESS</td>
+                                </tr>
+                                <tr class="bg-success" >
+                                    <th scope="row">16</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>SUCCESS</td>
+                                </tr>
+                                <tr class="bg-success" >
+                                    <th scope="row">17</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>SUCCESS</td>
+                                </tr>
+                                <tr class="bg-success" >
+                                    <th scope="row">18</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>SUCCESS</td>
+                                </tr>
+                                <tr class="bg-success" >
+                                    <th scope="row">19</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>SUCCESS</td>
+                                </tr>
+                                <tr class="bg-success" >
+                                    <th scope="row">20</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>SUCCESS</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                    <div class="text">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr >
+                                    <th>#</th>
+                                    <th>SUITES 1 EXAMPLE TESTS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-info">
+                                    <th scope="row">1</th>
+                                    <td>Jakis test w tym miejscu jego nazwa</td>
+                                </tr>
+                                <tr class="bg-info">
+                                    <th scope="row">2</th>
+                                      <td>Jakis test w tym miejscu jego nazwa</td>
+                                </tr>
+                                <tr class="bg-info">
+                                    <th scope="row">3</th>
+                                      <td>Jakis test w tym miejscu jego nazwa</td>
+                                </tr>
+                                <tr class="bg-info" >
+                                    <th scope="row">4</th>
+                                      <td>Jakis test w tym miejscu jego nazwa</td>
+                                </tr>
+                                <tr class="bg-info" >
+                                    <th scope="row">5</th>
+                                      <td>Jakis test w tym miejscu jego nazwa</td>
+                                </tr>
+                                <tr class="bg-info" >
+                                    <th scope="row">6</th>
+                                      <td>Jakis test w tym miejscu jego nazwa</td>
+                                </tr>
+                                <tr class="bg-info">
+                                    <th scope="row">7</th>
+                                    <td>Jakis test w tym miejscu jego nazwa</td>>
+                                </tr>
+                                <tr class="bg-info">
+                                    <th scope="row">8</th>
+                                      <td>Jakis test w tym miejscu jego nazwa</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text">
+                      <table class="table table-hover">
+                          <thead>
+                              <tr >
+                                  <th>#</th>
+                                  <th>SUITES 2 EXAMPLE TESTS</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr class="bg-info">
+                                  <th scope="row">1</th>
+                                  <td>Jakis test w tym miejscu jego nazwa</td>
+                              </tr>
+                              <tr class="bg-info">
+                                  <th scope="row">2</th>
+                                    <td>Jakis test w tym miejscu jego nazwa</td>
+                              </tr>
+                              <tr class="bg-info">
+                                  <th scope="row">3</th>
+                                    <td>Jakis test w tym miejscu jego nazwa</td>
+                              </tr>
+                              <tr class="bg-info" >
+                                  <th scope="row">4</th>
+                                    <td>Jakis test w tym miejscu jego nazwa</td>
+                              </tr>
+                              <tr class="bg-info" >
+                                  <th scope="row">5</th>
+                                    <td>Jakis test w tym miejscu jego nazwa</td>
+                              </tr>
+                              <tr class="bg-info" >
+                                  <th scope="row">6</th>
+                                    <td>Jakis test w tym miejscu jego nazwa</td>
+                              </tr>
+                              <tr class="bg-info">
+                                  <th scope="row">7</th>
+                                  <td>Jakis test w tym miejscu jego nazwa</td>>
+                              </tr>
+                              <tr class="bg-info">
+                                  <th scope="row">8</th>
+                                    <td>Jakis test w tym miejscu jego nazwa</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
     </section>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="jquery-1.11.0.js"></script>
+    <script src="js/jquery-1.11.0.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap.min.js"></script>
-    <script src="highcharts.js"></script>
-    <script src="highcharts-3d.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script src="js/highcharts-3d.js"></script>
     <!-- <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="http://code.highcharts.com/adapters/standalone-framework.js"></script> -->
-    <script src="progressbar.js" charset="utf-8"></script>
-    <script src="custom_js.js" charset="utf-8"></script>
+    <script src="js/progressbar.js" charset="utf-8"></script>
+    <script src="js/custom_js.js" charset="utf-8"></script>
 </body>
 
 </html>

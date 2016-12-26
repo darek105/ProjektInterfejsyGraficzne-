@@ -1,5 +1,5 @@
 $('.li-drop ul').hide();
-
+$('#projekt_menu_1').hide();
 
 function resize_content() {
     var widthContent = $(window).width() - 210;
@@ -13,8 +13,6 @@ $(window).resize(function(event) {
 });
 
 $(document).ready(function() {
-
-  //readr
 
     var value1 = 0;
     $('.suites h1:first-child').html(0);
@@ -48,7 +46,40 @@ $(document).ready(function() {
         }
     }, 1);
 
-    $('.li-drop').on('click', (arguments) => {
+
+
+
+
+
+    value1 = 0;
+    $('#projekt_menu_1 .suites h1:first-child').html(0);
+    setInterval(function() {
+        if (value1 < 20) {
+            $('#projekt_menu_1 .suites h1:first-child').html(++value1);
+        }
+    }, 3);
+
+    value3 = 0;
+    $('#projekt1 .failed h1:first-child').html(0);
+    setInterval(function() {
+        if (value3 < 4) {
+          $('#projekt_menu_1 .failed h1:first-child').html(++value3);
+        }
+    }, 100);
+
+
+    value4 = 0;
+    $('#projekt_menu_1 .success h1:first-child').html(0);
+    setInterval(function() {
+        if (value4 < 14) {
+          $('#projekt_menu_1 .success h1:first-child').html(++value4);
+        }
+    }, 1);
+
+
+
+
+    $('.li-drop #listProject').on('click', (arguments) => {
         $('.li-drop ul').toggle(function() {
             $('.li-drop ul li').each(function(index, el) {
                 $(this).delay(100 * index).slideUp('fast');
@@ -62,6 +93,42 @@ $(document).ready(function() {
                 }
             });
         });
+    });
+
+    $('.menu_item ul li').eq(0).on('click', (arguments) => {
+      $('section').eq(1).children().hide();
+      $('#home').show();
+    });
+
+    $('.li-drop ul li').eq(0).on('click', (arguments) => {
+      $('section').eq(1).children().hide();
+      $('#projekt_menu_1').show();
+
+      var value5 = 0;
+      $('#projekt_menu_1 .suites h1:first-child').html(0);
+      setInterval(function() {
+          if (value5 < 20) {
+              $('#projekt_menu_1 .suites h1:first-child').html(++value5);
+          }
+      }, 3);
+
+      var value6 = 0;
+      $('#projekt1 .failed h1:first-child').html(0);
+      setInterval(function() {
+          if (value6 < 4) {
+            $('#projekt_menu_1 .failed h1:first-child').html(++value6);
+          }
+      }, 100);
+
+
+      var value7 = 0;
+      $('#projekt_menu_1 .success h1:first-child').html(0);
+      setInterval(function() {
+          if (value7 < 14) {
+            $('#projekt_menu_1 .success h1:first-child').html(++value7);
+          }
+      }, 1);
+
     });
 
     $(function () {

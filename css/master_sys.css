@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'NotoSans';
-  src: url("NotoSans-Regular.ttf");
+  src: url("../fonts/NotoSans-Regular.ttf");
 }
 
 body {
@@ -260,4 +260,20 @@ h3 {
 
 .text {
   margin: 40px 15px 0 0;
+}
+
+#projekt_menu_1 .container .row div div {
+  height: auto;
+}
+
+#projekt_menu_1 .suites {
+  height: 100px !important;
+}
+
+#projekt_menu_1 .failed {
+  height: 100px !important;
+}
+
+#projekt_menu_1 .success {
+  height: 100px !important;
 }
