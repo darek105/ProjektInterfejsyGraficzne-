@@ -1,5 +1,6 @@
 $('.li-drop ul').hide();
 $('#projekt_menu_1').hide();
+$('#testy').hide();
 
 function resize_content() {
     var widthContent = $(window).width() - 210;
@@ -100,6 +101,11 @@ $(document).ready(function() {
       $('#home').show();
     });
 
+    $('.menu_item ul li').eq(2).on('click', (arguments) => {
+      $('section').eq(1).children().hide();
+      $('#testy').show();
+    });
+
     $('.li-drop ul li').eq(0).on('click', (arguments) => {
       $('section').eq(1).children().hide();
       $('#projekt_menu_1').show();
@@ -130,6 +136,39 @@ $(document).ready(function() {
       }, 1);
 
     });
+
+
+    $('#showDetails').eq(0).on('click', (arguments) => {
+      $('section').eq(1).children().hide();
+      $('#projekt_menu_1').show();
+
+      var value5 = 0;
+      $('#projekt_menu_1 .suites h1:first-child').html(0);
+      setInterval(function() {
+          if (value5 < 20) {
+              $('#projekt_menu_1 .suites h1:first-child').html(++value5);
+          }
+      }, 3);
+
+      var value6 = 0;
+      $('#projekt1 .failed h1:first-child').html(0);
+      setInterval(function() {
+          if (value6 < 4) {
+            $('#projekt_menu_1 .failed h1:first-child').html(++value6);
+          }
+      }, 100);
+
+
+      var value7 = 0;
+      $('#projekt_menu_1 .success h1:first-child').html(0);
+      setInterval(function() {
+          if (value7 < 14) {
+            $('#projekt_menu_1 .success h1:first-child').html(++value7);
+          }
+      }, 1);
+
+    });
+
 
     $(function () {
       Highcharts.chart('wykres_slupkowy', {

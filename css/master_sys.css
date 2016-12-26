@@ -277,3 +277,14 @@ h3 {
 #projekt_menu_1 .success {
   height: 100px !important;
 }
+
+#showDetails {
+  background: #428bca;
+  height: 30px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 215px;
+  cursor: pointer;
+}
