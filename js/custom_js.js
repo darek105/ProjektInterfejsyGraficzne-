@@ -2,6 +2,7 @@ $('.li-drop ul').hide();
 $('#projekt_menu_1').hide();
 $('#testy').hide();
 $('#team').hide();
+$('#message').hide();
 
 
 function resize_content() {
@@ -125,6 +126,11 @@ $(document).ready(function() {
     $('.menu_item ul li').eq(6).on('click', (arguments) => {
         $('section').eq(1).children().hide();
         $('#testy').show();
+    });
+
+    $('.menu_item ul li').eq(8).on('click', (arguments) => {
+        $('section').eq(1).children().hide();
+        $('#message').show();
     });
 
 
@@ -655,3 +661,94 @@ Highcharts.theme = {
 
 // Apply the theme
 Highcharts.setOptions(Highcharts.theme);
+
+
+
+$('#darekMessage input').on('click', function (event) {
+  event.preventDefault();
+  var idForm = $(this).parent().attr('id');
+
+  var h1Form = $(this).parent().siblings();
+
+
+  sendMessageToPhp(idForm, h1Form);
+
+
+});
+
+$('#ryszardMessage input').on('click', function (event) {
+  event.preventDefault();
+  var idForm = $(this).parent().attr('id');
+
+  var h1Form = $(this).parent().siblings();
+
+
+  sendMessageToPhp(idForm, h1Form);
+
+
+});
+
+
+$('#maciekMessage input').on('click', function (event) {
+  event.preventDefault();
+  var idForm = $(this).parent().attr('id');
+
+  var h1Form = $(this).parent().siblings();
+
+
+  sendMessageToPhp(idForm, h1Form);
+
+
+});
+
+
+$('#jubaMessage input').on('click', function (event) {
+  event.preventDefault();
+  var idForm = $(this).parent().attr('id');
+
+  var h1Form = $(this).parent().siblings();
+
+
+  sendMessageToPhp(idForm, h1Form);
+
+
+});
+
+$('#DarekStMessage input').on('click', function (event) {
+  event.preventDefault();
+  var idForm = $(this).parent().attr('id');
+
+  var h1Form = $(this).parent().siblings();
+
+
+  sendMessageToPhp(idForm, h1Form);
+
+
+});
+
+
+function sendMessageToPhp(idForm, h1Form) {
+  // body...
+
+  this.idForm = idForm;
+  this.h1Form = h1Form;
+
+  var data = $(idForm).serialize();
+
+      $.ajax({
+          type: 'POST',
+          url: 'messagePhpAjax.php',
+          data: data,
+
+          success: function(response) {
+
+              if (response == "OK") {
+                  $(h1form).html('Dodano pracownika :)');
+              } else {
+                  $(h1form).html('Coś poszło nie tak :(');
+              }
+          }
+      });
+
+
+}

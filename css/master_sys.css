@@ -383,3 +383,73 @@ h3 {
 #team .team_profil .projekty h2 img {
   margin-right: 20px;
 }
+
+#message .col-md-4 {
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  transition: .5s all ease;
+}
+
+#message .col-md-4:hover {
+  background: #eee;
+}
+
+#message .team_profil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-family: 'NotoSans';
+  font-size: 12px;
+  background: none;
+  height: 640px;
+}
+
+#message .team_profil h1 {
+  font-size: 16px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+#message .team_profil img {
+  max-height: 200px;
+  top: 0;
+}
+
+#message .team_profil .message h1 {
+  background: #428bca;
+  font-size: 18px;
+  width: 300px;
+  height: 50px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#message .team_profil .message form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#message .team_profil .message input {
+  background: #428bca;
+  color: black;
+  border: none;
+  margin-left: 20px;
+  margin-top: 30px;
+  width: 90px;
+  height: 30px;
+  transition: .5s all ease;
+}
+
+#message .team_profil .message input:hover {
+  box-shadow: 3px 3px 10px #8E44AD;
+}
+
+#message .team_profil .message textarea {
+  width: 300px;
+  padding: 25px 25px;
+}
