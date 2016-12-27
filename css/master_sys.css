@@ -322,3 +322,64 @@ h3 {
   width: 90px;
   height: 30px;
 }
+
+#team .col-md-4 {
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  transition: .5s all ease;
+}
+
+#team .col-md-4:hover {
+  background: #eee;
+}
+
+#team .team_profil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-family: 'NotoSans';
+  font-size: 12px;
+  background: none;
+  height: 450px;
+}
+
+#team .team_profil h1 {
+  font-size: 16px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+#team .team_profil img {
+  max-height: 200px;
+  top: 0;
+}
+
+#team .team_profil .projekty h1 {
+  background: #428bca;
+  font-size: 18px;
+  width: 300px;
+  height: 50px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#team .team_profil .projekty h2 {
+  font-size: 16px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s all ease;
+  cursor: pointer;
+}
+
+#team .team_profil .projekty h2:hover {
+  background: #90CAF9;
+}
+
+#team .team_profil .projekty h2 img {
+  margin-right: 20px;
+}
