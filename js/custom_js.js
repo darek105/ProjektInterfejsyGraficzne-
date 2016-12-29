@@ -4,6 +4,7 @@ $('#testy').hide();
 $('#team').hide();
 $('#message').hide();
 $('#profil').hide();
+$('.boxToChange').hide();
 
 function resize_content() {
     var widthContent = $(window).width() - 210;

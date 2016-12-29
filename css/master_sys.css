@@ -470,6 +470,45 @@ h3 {
   box-shadow: 10px 10px 10px #01579B;
 }
 
+#profil .buttonChange {
+  background: none;
+}
+
+#profil .buttonChange button {
+  width: 150px;
+  height: 50px;
+  background: white;
+  color: #000;
+  border: none;
+}
+
+#profil .buttonChange .boxToChange {
+  display: flex;
+  flex-direction: row;
+}
+
+#profil .buttonChange .boxToChange select {
+  background: #fff;
+  color: black;
+  margin-right: 15px;
+}
+
+#profil .buttonChange .boxToChange input {
+  background: #fff;
+  border: none;
+  padding: 5px;
+  width: 150px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+#profil .buttonChange .boxToChange button {
+  width: 100px;
+  height: 50px;
+  background: #fff;
+  color: white;
+}
+
 #profil .descriptionPerson {
   margin-top: 50px;
   padding-top: 20px;
