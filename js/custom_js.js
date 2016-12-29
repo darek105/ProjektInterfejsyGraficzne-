@@ -3,7 +3,7 @@ $('#projekt_menu_1').hide();
 $('#testy').hide();
 $('#team').hide();
 $('#message').hide();
-
+$('#profil').hide();
 
 function resize_content() {
     var widthContent = $(window).width() - 210;
@@ -133,6 +133,11 @@ $(document).ready(function() {
         $('#message').show();
     });
 
+    $('.menu_item ul li').eq(9).on('click', (arguments) => {
+        $('section').eq(1).children().hide();
+        $('#profil').show();
+    });
+
 
         $('.menu_item ul li').eq(7).on('click', (arguments) => {
             $('section').eq(1).children().hide();
@@ -234,6 +239,8 @@ $(document).ready(function() {
 
     });
 
+
+    // $('')
 
     $(function() {
         Highcharts.chart('wykres_slupkowy', {
@@ -743,7 +750,7 @@ function sendMessageToPhp(idForm, h1Form) {
           success: function(response) {
 
               if (response == "OK") {
-                  $(h1form).html('Dodano pracownika :)');
+                  $(h1form).html('Wiadomość wysłana :)');
               } else {
                   $(h1form).html('Coś poszło nie tak :(');
               }
