@@ -53,7 +53,32 @@ $(document).ready(function() {
 
 
 
+    $('button[name=change]').on('click', (arguments) => {
+      $('.boxToChange').show();
+      $('button[name=change]').hide();
+    });
 
+    $('button[name=upDataInProfil]').on('click', (arguments) => {
+
+      var valueInput = $('input[name=IMIE]').val();
+      var valueSelect = $('select[name=change]').val();
+
+      if (valueInput != "") {
+        $('.' + valueSelect).children().eq(1).text(valueInput);
+        $('#errorData').text("");
+
+        $('.boxToChange').hide();
+        $('button[name=change]').show();
+      } else {
+        $('#errorData').text("Wpisz jakieś dane !!!");
+      }
+
+
+
+
+
+
+    });
 
 
     value1 = 0;

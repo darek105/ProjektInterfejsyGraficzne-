@@ -460,18 +460,30 @@ h3 {
   justify-content: center;
   flex-direction: column;
   color: #E0E0E0;
-  height: 700px;
+  height: 785px;
   text-align: center;
   background: #2962FF;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1550px) {
+  #profil .col-md-4 {
+    height: 800px;
+  }
 }
 
 #profil img {
   max-height: 250px;
   box-shadow: 10px 10px 10px #01579B;
+  margin-top: 20px;
 }
 
 #profil .buttonChange {
   background: none;
+  margin-top: 20px;
+  background: none;
+  height: 145px;
 }
 
 #profil .buttonChange button {
@@ -487,26 +499,54 @@ h3 {
   flex-direction: row;
 }
 
+@media (max-width: 1550px) {
+  #profil .buttonChange .boxToChange {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 #profil .buttonChange .boxToChange select {
   background: #fff;
   color: black;
   margin-right: 15px;
+  height: 30px;
+}
+
+@media (max-width: 1550px) {
+  #profil .buttonChange .boxToChange select {
+    margin-top: 15px;
+  }
 }
 
 #profil .buttonChange .boxToChange input {
   background: #fff;
   border: none;
   padding: 5px;
-  width: 150px;
-  height: 40px;
+  width: 190px;
+  height: 30px;
   margin-right: 15px;
+  color: black;
+}
+
+@media (max-width: 1550px) {
+  #profil .buttonChange .boxToChange input {
+    margin-top: 15px;
+  }
 }
 
 #profil .buttonChange .boxToChange button {
   width: 100px;
-  height: 50px;
+  height: 30px;
   background: #fff;
-  color: white;
+  color: black;
+}
+
+@media (max-width: 1550px) {
+  #profil .buttonChange .boxToChange button {
+    margin-top: 15px;
+  }
 }
 
 #profil .descriptionPerson {
