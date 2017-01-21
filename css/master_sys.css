@@ -67,6 +67,7 @@ input[name*="search"] {
   display: flex;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
 }
 
 .user img {
@@ -79,6 +80,10 @@ input[name*="search"] {
   margin-bottom: 5px;
   font-size: 16pt;
   color: #FFFFFF;
+}
+
+.margin-bottom {
+  margin-bottom: 50px;
 }
 
 .line-style-black {
@@ -402,7 +407,7 @@ h3 {
   font-family: 'NotoSans';
   font-size: 12px;
   background: none;
-  height: 640px;
+  height: 600px;
 }
 
 #message .team_profil h1 {
@@ -462,7 +467,7 @@ h3 {
   color: #E0E0E0;
   height: 785px;
   text-align: center;
-  background: #2962FF;
+  background: rgba(41, 95, 255, 0.6);
   margin-top: 40px;
   margin-bottom: 50px;
 }

@@ -51,35 +51,27 @@ $(document).ready(function() {
         }
     }, 1);
 
-
-
     $('button[name=change]').on('click', (arguments) => {
-      $('.boxToChange').show();
-      $('button[name=change]').hide();
+        $('.boxToChange').show();
+        $('button[name=change]').hide();
     });
 
     $('button[name=upDataInProfil]').on('click', (arguments) => {
 
-      var valueInput = $('input[name=IMIE]').val();
-      var valueSelect = $('select[name=change]').val();
+        var valueInput = $('input[name=IMIE]').val();
+        var valueSelect = $('select[name=change]').val();
 
-      if (valueInput != "") {
-        $('.' + valueSelect).children().eq(1).text(valueInput);
-        $('#errorData').text("");
+        if (valueInput != "") {
+            $('.' + valueSelect).children().eq(1).text(valueInput);
+            $('#errorData').text("");
 
-        $('.boxToChange').hide();
-        $('button[name=change]').show();
-      } else {
-        $('#errorData').text("Wpisz jakieś dane !!!");
-      }
-
-
-
-
-
+            $('.boxToChange').hide();
+            $('button[name=change]').show();
+        } else {
+            $('#errorData').text("Wpisz jakieś dane !!!");
+        }
 
     });
-
 
     value1 = 0;
     $('#projekt_menu_1 .suites h1:first-child').html(0);
@@ -97,7 +89,6 @@ $(document).ready(function() {
         }
     }, 100);
 
-
     value4 = 0;
     $('#projekt_menu_1 .success h1:first-child').html(0);
     setInterval(function() {
@@ -106,27 +97,25 @@ $(document).ready(function() {
         }
     }, 1);
 
-
     $('#dodajNameTest').on('click', (arguments) => {
 
         if ($('#idTest').val() == "") {
-          $('#errorAddTest').remove();
-          $('.addTest').css('height', '150px');
-          $('.addTest').append('<h3 style="color:red;" id="errorAddTest"> Podaj nazwe testu !!! </h3>');
+            $('#errorAddTest').remove();
+            $('.addTest').css('height', '150px');
+            $('.addTest').append('<h3 style="color:red;" id="errorAddTest"> Podaj nazwe testu !!! </h3>');
         } else {
 
-          $('#errorAddTest').remove();
-          $('.addTest').css('height', '100px');
-          var textValLastThInTable = parseInt($('#testy tbody tr').last().children().eq(0).text());
-          ++textValLastThInTable;
-          var valInput = $('#idTest').val();
-          console.log(textValLastThInTable);
+            $('#errorAddTest').remove();
+            $('.addTest').css('height', '100px');
+            var textValLastThInTable = parseInt($('#testy tbody tr').last().children().eq(0).text());
+            ++textValLastThInTable;
+            var valInput = $('#idTest').val();
+            console.log(textValLastThInTable);
 
-          $('#testy tbody').append('<tr class="bg-info"><th scope="row">' + textValLastThInTable + '</th><td>' + valInput + '</td></tr>');
-          $('#idTest').val("");
+            $('#testy tbody').append('<tr class="bg-info"><th scope="row">' + textValLastThInTable + '</th><td>' + valInput + '</td></tr>');
+            $('#idTest').val("");
         }
     });
-
 
     $('.li-drop #listProject').on('click', (arguments) => {
         $('.li-drop ul').toggle(function() {
@@ -149,6 +138,11 @@ $(document).ready(function() {
         $('#home').show();
     });
 
+    $('.user').on('click', (arguments) => {
+        $('section').eq(1).children().hide();
+        $('#profil').show();
+    });
+
     $('.menu_item ul li').eq(6).on('click', (arguments) => {
         $('section').eq(1).children().hide();
         $('#testy').show();
@@ -164,11 +158,10 @@ $(document).ready(function() {
         $('#profil').show();
     });
 
-
-        $('.menu_item ul li').eq(7).on('click', (arguments) => {
-            $('section').eq(1).children().hide();
-            $('#team').show();
-        });
+    $('.menu_item ul li').eq(7).on('click', (arguments) => {
+        $('section').eq(1).children().hide();
+        $('#team').show();
+    });
 
     $('.li-drop ul li').eq(0).on('click', (arguments) => {
         $('section').eq(1).children().hide();
@@ -190,7 +183,6 @@ $(document).ready(function() {
             }
         }, 100);
 
-
         var value7 = 0;
         $('#projekt_menu_1 .success h1:first-child').html(0);
         setInterval(function() {
@@ -200,7 +192,6 @@ $(document).ready(function() {
         }, 1);
 
     });
-
 
     $('#showDetails').eq(0).on('click', (arguments) => {
         $('section').eq(1).children().hide();
@@ -222,7 +213,6 @@ $(document).ready(function() {
             }
         }, 100);
 
-
         var value7 = 0;
         $('#projekt_menu_1 .success h1:first-child').html(0);
         setInterval(function() {
@@ -232,7 +222,6 @@ $(document).ready(function() {
         }, 1);
 
     });
-
 
     $('#goToProjekt1').eq(0).on('click', (arguments) => {
         $('section').eq(1).children().hide();
@@ -254,7 +243,6 @@ $(document).ready(function() {
             }
         }, 100);
 
-
         var value7 = 0;
         $('#projekt_menu_1 .success h1:first-child').html(0);
         setInterval(function() {
@@ -264,7 +252,6 @@ $(document).ready(function() {
         }, 1);
 
     });
-
 
     // $('')
 
@@ -277,7 +264,9 @@ $(document).ready(function() {
                 text: 'PODGLĄD TESTOW'
             },
             xAxis: {
-                categories: ['PROJEKT 1', 'PROJEKT 2', 'PROJEKT 3', 'PROJEKT 4', 'PROJEKT 5'],
+                categories: [
+                    'PROJEKT 1', 'PROJEKT 2', 'PROJEKT 3', 'PROJEKT 4', 'PROJEKT 5'
+                ],
                 title: {
                     text: null
                 }
@@ -316,16 +305,18 @@ $(document).ready(function() {
             credits: {
                 enabled: false
             },
-            series: [{
-                name: 'ZAKOŃCZONYCH',
-                data: [60, 4, 3, 47, 12]
-            }, {
-                name: 'NIEUDANYCH',
-                data: [20, 12, 17, 36, 0]
-            }, {
-                name: 'ZAPLANOWANYCH',
-                data: [40, 3, 3, 7, 12]
-            }]
+            series: [
+                {
+                    name: 'ZAKOŃCZONYCH',
+                    data: [60, 4, 3, 47, 12]
+                }, {
+                    name: 'NIEUDANYCH',
+                    data: [20, 12, 17, 36, 0]
+                }, {
+                    name: 'ZAPLANOWANYCH',
+                    data: [40, 3, 3, 7, 12]
+                }
+            ]
         });
     });
 
@@ -356,22 +347,32 @@ $(document).ready(function() {
                     }
                 }
             },
-            series: [{
-                type: 'pie',
-                name: 'Procentowy udział',
-                data: [
-                    ['PROJEKT 1', 45.0],
-                    ['PROJKET 2', 26.8], {
-                        name: 'PROJEKT 2',
-                        y: 14.8,
-                        sliced: true,
-                        selected: true
-                    },
-                    ['PROJEKT 3', 8.5],
-                    ['PROJKET 4', 6.2],
-                    ['PROJKET 5', 0.7]
-                ]
-            }]
+            series: [
+                {
+                    type: 'pie',
+                    name: 'Procentowy udział',
+                    data: [
+                        [
+                            'PROJEKT 1', 45.0
+                        ],
+                        [
+                            'PROJKET 2', 26.8
+                        ], {
+                            name: 'PROJEKT 2',
+                            y: 14.8,
+                            sliced: true,
+                            selected: true
+                        },
+                        [
+                            'PROJEKT 3', 8.5
+                        ],
+                        [
+                            'PROJKET 4', 6.2
+                        ],
+                        ['PROJKET 5', 0.7]
+                    ]
+                }
+            ]
         });
     });
 
@@ -451,7 +452,6 @@ $(document).ready(function() {
 
     bar1.animate(0.8); // Number from 0.0 to 1.0
 
-
     var bar3 = new ProgressBar.Circle(projekt3, {
         color: '#1A237E',
         // This has to be the same size as the maximum width to
@@ -489,7 +489,6 @@ $(document).ready(function() {
     bar3.text.style.fontSize = '2rem';
 
     bar3.animate(0.2); // Number from 0.0 to 1.0
-
 
     var bar4 = new ProgressBar.Circle(projekt4, {
         color: '#1A237E',
@@ -632,8 +631,18 @@ Highcharts.createElement('link', {
 }, null, document.getElementsByTagName('head')[0]);
 
 Highcharts.theme = {
-    colors: ['#7cb5ec', '#f7a35c', '#90ee7e', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
-        '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'
+    colors: [
+        '#7cb5ec',
+        '#f7a35c',
+        '#90ee7e',
+        '#7798BF',
+        '#aaeeee',
+        '#ff0066',
+        '#eeaaee',
+        '#55BF3B',
+        '#DF5353',
+        '#7798BF',
+        '#aaeeee'
     ],
     chart: {
         backgroundColor: null,
@@ -686,7 +695,6 @@ Highcharts.theme = {
         }
     },
 
-
     // General
     background2: '#F0F0EA'
 
@@ -695,93 +703,77 @@ Highcharts.theme = {
 // Apply the theme
 Highcharts.setOptions(Highcharts.theme);
 
+$('#darekMessage input').on('click', function(event) {
+    event.preventDefault();
+    var idForm = $(this).parent().attr('id');
 
+    var h1Form = $(this).parent().siblings();
 
-$('#darekMessage input').on('click', function (event) {
-  event.preventDefault();
-  var idForm = $(this).parent().attr('id');
-
-  var h1Form = $(this).parent().siblings();
-
-
-  sendMessageToPhp(idForm, h1Form);
-
+    sendMessageToPhp(idForm, h1Form);
 
 });
 
-$('#ryszardMessage input').on('click', function (event) {
-  event.preventDefault();
-  var idForm = $(this).parent().attr('id');
+$('#ryszardMessage input').on('click', function(event) {
+    event.preventDefault();
+    var idForm = $(this).parent().attr('id');
 
-  var h1Form = $(this).parent().siblings();
+    var h1Form = $(this).parent().siblings();
 
-
-  sendMessageToPhp(idForm, h1Form);
-
+    sendMessageToPhp(idForm, h1Form);
 
 });
 
+$('#maciekMessage input').on('click', function(event) {
+    event.preventDefault();
+    var idForm = $(this).parent().attr('id');
 
-$('#maciekMessage input').on('click', function (event) {
-  event.preventDefault();
-  var idForm = $(this).parent().attr('id');
+    var h1Form = $(this).parent().siblings();
 
-  var h1Form = $(this).parent().siblings();
-
-
-  sendMessageToPhp(idForm, h1Form);
-
+    sendMessageToPhp(idForm, h1Form);
 
 });
 
+$('#jubaMessage input').on('click', function(event) {
+    event.preventDefault();
+    var idForm = $(this).parent().attr('id');
 
-$('#jubaMessage input').on('click', function (event) {
-  event.preventDefault();
-  var idForm = $(this).parent().attr('id');
+    var h1Form = $(this).parent().siblings();
 
-  var h1Form = $(this).parent().siblings();
-
-
-  sendMessageToPhp(idForm, h1Form);
-
+    sendMessageToPhp(idForm, h1Form);
 
 });
 
-$('#DarekStMessage input').on('click', function (event) {
-  event.preventDefault();
-  var idForm = $(this).parent().attr('id');
+$('#DarekStMessage input').on('click', function(event) {
+    event.preventDefault();
+    var idForm = $(this).parent().attr('id');
 
-  var h1Form = $(this).parent().siblings();
+    var h1Form = $(this).parent().siblings();
 
-
-  sendMessageToPhp(idForm, h1Form);
-
+    sendMessageToPhp(idForm, h1Form);
 
 });
-
 
 function sendMessageToPhp(idForm, h1Form) {
-  // body...
+    // body...
 
-  this.idForm = idForm;
-  this.h1Form = h1Form;
+    this.idForm = idForm;
+    this.h1Form = h1Form;
 
-  var data = $(idForm).serialize();
+    var data = $(idForm).serialize();
 
-      $.ajax({
-          type: 'POST',
-          url: 'messagePhpAjax.php',
-          data: data,
+    $.ajax({
+        type: 'POST',
+        url: '../php/messagePhpAjax.php',
+        data: data,
 
-          success: function(response) {
+        success: function(response) {
 
-              if (response == "OK") {
-                  $(h1form).html('Wiadomość wysłana :)');
-              } else {
-                  $(h1form).html('Coś poszło nie tak :(');
-              }
-          }
-      });
-
+            if (response == "OK") {
+                $(h1form).html('Wiadomość wysłana :)');
+            } else {
+                $(h1form).html('Coś poszło nie tak :(');
+            }
+        }
+    });
 
 }
