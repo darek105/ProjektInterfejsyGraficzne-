@@ -746,7 +746,6 @@ $('#jubaMessage input').on('click', function(event) {
 $('#DarekStMessage input').on('click', function(event) {
     event.preventDefault();
     var idForm = $(this).parent().attr('id');
-
     var h1Form = $(this).parent().siblings();
 
     sendMessageToPhp(idForm, h1Form);
@@ -756,24 +755,25 @@ $('#DarekStMessage input').on('click', function(event) {
 function sendMessageToPhp(idForm, h1Form) {
     // body...
 
-    this.idForm = idForm;
-    this.h1Form = h1Form;
-
-    var data = $(idForm).serialize();
-
-    $.ajax({
-        type: 'POST',
-        url: '../php/messagePhpAjax.php',
-        data: data,
-
-        success: function(response) {
-
-            if (response == "OK") {
-                $(h1form).html('Wiadomość wysłana :)');
-            } else {
-                $(h1form).html('Coś poszło nie tak :(');
-            }
-        }
-    });
+    // var idForm = idForm;
+    // var h1Form = h1Form;
+    //
+    // var data = $("#" + idForm).serialize();
+    //
+    // console.log(data);
+    // $.ajax({
+    //     type: 'POST',
+    //     url: '../php/messagePhpAjax.php',
+    //     data: data,
+    //
+    //     success: function(response) {
+    //
+    //         if (response == "ok") {
+    //             $(h1Form).html('Wiadomość wysłana :)');
+    //         } else {
+    //             $(h1Form).html('Coś poszło nie tak :(');
+    //         }
+    //     }
+    // });
 
 }
