@@ -1,136 +1,34 @@
-@font-face {
-  font-family: 'Montserrat-Regular';
-  src: url("../fonts/Montserrat-Regular.otf");
-}
+/*
+Error: The line was indented 2 levels deeper than the previous line.
+        on line 57 of C:\Users\Darek\Desktop\IGPROJEKT\css\master.sass
 
-@font-face {
-  font-family: 'Bikinis';
-  src: url("../fonts/Bikinis.ttf");
-}
+52:   text-shadow: 2px 2px 3px #000
+53:   h1::first-letter
+54:     font-size: 32pt
+55: 
+56: .title_panel
+57:     height: 45px
+58:     background: rgba(44,61,78,0.9)
+59:     @extend .for_center
+60: 
+61: .box-from
+62:   height: 88%
 
-.for_center, body, .wrapper, .title_panel, .box-from, form, #login, #password, #checkbox-custom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: url(../img/bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  flex-direction: column;
-  height: 100vh;
-  font-family: 'Montserrat-Regular';
-}
-
-.wrapper {
-  width: 400px;
-  height: 450px;
-  flex-direction: column;
-}
-
-.form {
-  width: 400px;
-  height: 450px;
-  background: rgba(52, 74, 95, 0.95);
-  margin-top: 30px;
-}
-
-h4 {
-  margin: 0;
-  color: white;
-  text-transform: uppercase;
-}
-
-.title {
-  color: #FFFFFF;
-  font-size: 16pt;
-  font-weight: 700;
-  font-style: italic;
-  text-shadow: 2px 2px 3px #000;
-}
-
-.title h1::first-letter {
-  font-size: 32pt;
-}
-
-.title_panel {
-  height: 45px;
-  background: rgba(44, 61, 78, 0.9);
-}
-
-.box-from {
-  height: 88%;
-}
-
-form {
-  height: 350px;
-  flex-direction: column;
-}
-
-#login, #password {
-  flex-direction: column;
-  align-items: flex-start;
-  color: #FFFFFF;
-}
-
-#login input, #password input {
-  width: 250px;
-  height: 30px;
-  margin-top: 4px;
-  border: none;
-  border-radius: 0px;
-  padding-left: 10px;
-  font-family: inherit;
-  background: rgba(44, 61, 78, 0.8);
-  color: white;
-}
-
-#password {
-  margin-top: 30px;
-}
-
-input[type*="submit"] {
-  margin-top: 30px;
-  width: 100px;
-  background: #32C5D2;
-  height: 40px;
-  font-family: inherit;
-  color: white;
-  border: none;
-  transition: background-color 0.5s ease;
-}
-
-input[type*="submit"]:hover {
-  background: #3598DC;
-}
-
-#checkbox-custom {
-  flex-direction: row;
-  margin: 10px 0 0 0;
-  color: #BBDEFB;
-}
-
-#checkbox-custom input {
-  width: 20px;
-  margin: 0;
-}
-
-#checkbox-custom label {
-  margin: 0;
-}
-
-#remember {
-  font-size: 10pt;
-  margin-top: 14px;
-  transition: color 0.5s ease;
-  cursor: pointer;
-  color: #BBDEFB;
-}
-
-#remember:hover {
-  color: #FFF;
-}
+Backtrace:
+C:\Users\Darek\Desktop\IGPROJEKT\css\master.sass:57
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:520:in `tree'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:409:in `_to_tree'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
+C:/Ruby23-x64/bin/sass:23:in `load'
+C:/Ruby23-x64/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: The line was indented 2 levels deeper than the previous line.\A         on line 57 of C:\Users\Darek\Desktop\IGPROJEKT\css\master.sass\A \A 52:   text-shadow: 2px 2px 3px #000\A 53:   h1::first-letter\A 54:     font-size: 32pt\A 55: \A 56: .title_panel\A 57:     height: 45px\A 58:     background: rgba(44,61,78,0.9)\A 59:     @extend .for_center\A 60: \A 61: .box-from\A 62:   height: 88%"; }
